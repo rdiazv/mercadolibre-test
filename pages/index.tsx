@@ -1,5 +1,6 @@
-import Head from "next/head";
-import { NextPage } from "next";
+import React from 'react'
+import Head from 'next/head'
+import { NextPage } from 'next'
 
 const Home: NextPage = () => (
   <div className="container">
@@ -199,6 +200,6 @@ const Home: NextPage = () => (
       }
     `}</style>
   </div>
-);
+)
 
-export default Home;
+export default Home
