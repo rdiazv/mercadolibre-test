@@ -15,6 +15,14 @@ const SearchResultItem = ({ item }: Props) => (
 
     <div>
       <div className="SearchResultItem__title">{item.title}</div>
+
+      {item.original_price && (
+        <Price
+          price={item.original_price}
+          className="SearchResultItem__originalPrice"
+        />
+      )}
+
       <Price price={item.price} className="SearchResultItem__price" />
     </div>
   </div>

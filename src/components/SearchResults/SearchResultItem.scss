@@ -22,6 +22,18 @@
   margin-bottom: 8px;
 }
 
+.SearchResultItem__originalPrice,
+.SearchResultItem__price {
+  display: block;
+}
+
+.SearchResultItem__originalPrice {
+  margin-bottom: 2px;
+  font-size: 13px;
+  color: #999;
+  text-decoration-line: line-through;
+}
+
 .SearchResultItem__price {
   font-size: 22px;
 }
