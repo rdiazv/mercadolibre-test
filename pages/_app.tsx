@@ -3,6 +3,7 @@ import { NextComponentType } from 'next'
 import { AppContext, AppProps, AppInitialProps } from 'next/app'
 import SearchForm from '~/components/SearchForm'
 import getQueryKey from '~/helpers/getQueryKey'
+import 'normalize.css'
 import '~/theme/base.scss'
 
 type Props = AppProps & {
