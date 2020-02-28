@@ -17,6 +17,9 @@
       "version": "detect"
     }
   },
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "off"
+  },
   "overrides": [
     {
       "files": ["next.config.js"],
