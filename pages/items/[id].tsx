@@ -3,13 +3,13 @@ import { NextPage } from 'next'
 import getQueryKey from '~/helpers/getQueryKey'
 
 type Props = {
-  id: number
+  id: string
 }
 
 const Item: NextPage<Props> = ({ id }: Props) => <main>Item {id}</main>
 
 Item.getInitialProps = ({ query }) => ({
-  id: parseInt(getQueryKey(query, 'id'), 10),
+  id: getQueryKey(query, 'id'),
 })
 
 export default Item
