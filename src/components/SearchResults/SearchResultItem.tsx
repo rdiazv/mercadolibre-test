@@ -1,5 +1,6 @@
 import React from 'react'
 import { SearchResultItem as SearchResultItemType } from '~/types/api'
+import Price from '~/components/Price'
 import './SearchResultItem.scss'
 
 type Props = {
@@ -14,7 +15,7 @@ const SearchResultItem = ({ item }: Props) => (
 
     <div>
       <div className="SearchResultItem__title">{item.title}</div>
-      <div className="SearchResultItem__price">{item.price}</div>
+      <Price price={item.price} className="SearchResultItem__price" />
     </div>
   </div>
 )
