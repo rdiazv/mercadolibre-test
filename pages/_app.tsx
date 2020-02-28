@@ -1,9 +1,9 @@
 import React from 'react'
-import SearchForm from '../src/components/SearchForm'
 import { NextComponentType } from 'next'
 import { AppContext, AppProps, AppInitialProps } from 'next/app'
-import '../src/theme/base.scss'
-import getQueryKey from '../src/helpers/getQueryKey'
+import SearchForm from '~/components/SearchForm'
+import getQueryKey from '~/helpers/getQueryKey'
+import '~/theme/base.scss'
 
 type Props = AppProps & {
   search: string

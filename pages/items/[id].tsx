@@ -1,6 +1,6 @@
 import React from 'react'
 import { NextPage } from 'next'
-import getQueryKey from '../../src/helpers/getQueryKey'
+import getQueryKey from '~/helpers/getQueryKey'
 
 type Props = {
   id: number
