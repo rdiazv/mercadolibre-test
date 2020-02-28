@@ -1,0 +1,27 @@
+.SearchResultItem {
+  display: flex;
+  padding: 24px;
+}
+
+.SearchResultItem__imageContainer {
+  margin-right: 32px;
+  width: 90px;
+  height: 90px;
+  flex-shrink: 0;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.SearchResultItem__title {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+
+.SearchResultItem__price {
+  font-size: 22px;
+}
