@@ -1,0 +1,33 @@
+@import 'theme/mixins';
+
+$input-height: 40px;
+
+.SearchForm {
+  position: relative;
+}
+
+.SearchForm__input {
+  background-color: #fff;
+  border-radius: 2px;
+  border: none;
+  box-shadow: rgba(#000, 0.2) 0px 1px 2px 0px;
+  font-size: 16px;
+  height: $input-height;
+  outline: none;
+  padding: 0 16px;
+  width: 100%;
+}
+
+.SearchForm__submit {
+  @include reset-button;
+  height: $input-height;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.SearchForm__iconContainer {
+  border-left: #e6e6e6 solid 1px;
+  padding: 2px 16px;
+  display: flex;
+}

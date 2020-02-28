@@ -1,8 +1,8 @@
 import React from 'react'
 import { NextComponentType } from 'next'
 import { AppContext, AppProps, AppInitialProps } from 'next/app'
-import SearchForm from '~/components/SearchForm'
 import getQueryKey from '~/helpers/getQueryKey'
+import AppHeader from '~/components/AppHeader'
 import 'normalize.css'
 import '~/theme/base.scss'
 
@@ -16,7 +16,7 @@ const App: NextComponentType<AppContext, AppInitialProps, Props> = ({
   search,
 }: Props) => (
   <div>
-    <SearchForm defaultValue={search} />
+    <AppHeader search={search} />
     <Component {...pageProps} />
   </div>
 )

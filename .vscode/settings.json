@@ -9,5 +9,8 @@
     "typescriptreact",
     "json"
   ],
-  "editor.formatOnSave": false
+  "editor.formatOnSave": false,
+  "[scss]": {
+    "editor.formatOnSave": true
+  }
 }
