@@ -9,11 +9,13 @@ type Props = {
 
 const AppHeader: React.FC<Props> = ({ search }: Props) => (
   <header className="AppHeader">
-    <a href="/" className="AppHeader__logo">
-      <img src={logoUrl} width={39} height={28} />
-    </a>
+    <div className="AppHeader__body">
+      <a href="/" className="AppHeader__logo">
+        <img src={logoUrl} width={39} height={28} />
+      </a>
 
-    <SearchForm className="AppHeader__SearchForm" defaultValue={search} />
+      <SearchForm className="AppHeader__SearchForm" defaultValue={search} />
+    </div>
   </header>
 )
 

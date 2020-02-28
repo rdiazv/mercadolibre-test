@@ -1,11 +1,26 @@
+@import 'theme/media';
 @import 'theme/variables';
 
 .AppHeader {
   background-color: #fff159;
   border-bottom: #d6d6d6 1px;
+
+  @include breakpoint($sm) {
+    padding: 0 $content-spacing;
+  }
+}
+
+.AppHeader__body {
   padding: 8px 16px;
   display: flex;
   align-items: center;
+  margin: 0 auto;
+  max-width: $content-max-width;
+
+  @include breakpoint($sm) {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 .AppHeader__logo {

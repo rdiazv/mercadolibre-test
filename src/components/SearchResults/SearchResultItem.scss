@@ -1,6 +1,14 @@
+@import 'theme/media';
+@import 'theme/variables';
+
 .SearchResultItem {
   display: flex;
-  padding: 24px;
+  font-size: 14px;
+  padding: 1.25em 1.75em;
+
+  @include breakpoint($sm) {
+    font-size: 17px;
+  }
 }
 
 .SearchResultItem__imageContainer {
@@ -16,10 +24,10 @@
 }
 
 .SearchResultItem__title {
-  font-size: 18px;
+  font-size: 1.2em;
   font-weight: 300;
-  line-height: 24px;
-  margin-bottom: 8px;
+  line-height: 1.4em;
+  margin-bottom: 0.5em;
 }
 
 .SearchResultItem__originalPrice,
@@ -28,12 +36,12 @@
 }
 
 .SearchResultItem__originalPrice {
-  margin-bottom: 2px;
+  margin-bottom: 0.2em;
   font-size: 13px;
   color: #999;
   text-decoration-line: line-through;
 }
 
 .SearchResultItem__price {
-  font-size: 22px;
+  font-size: 1.4em;
 }
