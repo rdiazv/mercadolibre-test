@@ -1,3 +1,27 @@
+export type ApiPrice = {
+  currency: string
+  amount: number
+  decimals: number
+}
+
+export type ApiSearchResult = {
+  id: string
+  title: string
+  price: ApiPrice
+  picture: string
+  condition: 'new' | 'used'
+  free_shipping: boolean
+}
+
+export type ApiSearch = {
+  author: {
+    name: string
+    lastname: string
+  }
+  categories: string[]
+  items: ApiSearchResult[]
+}
+
 export type MeLiSearchResult = {
   id: string
   title: string

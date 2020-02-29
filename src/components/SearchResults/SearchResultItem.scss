@@ -29,21 +29,10 @@
   font-size: 1.2em;
   font-weight: 300;
   line-height: 1.4em;
-  margin-bottom: 0.5em;
 }
 
-.SearchResultItem__originalPrice,
 .SearchResultItem__price {
   display: block;
-}
-
-.SearchResultItem__originalPrice {
-  margin-bottom: 0.2em;
-  font-size: 13px;
-  color: #999;
-  text-decoration-line: line-through;
-}
-
-.SearchResultItem__price {
+  margin-top: 0.5em;
   font-size: 1.4em;
 }

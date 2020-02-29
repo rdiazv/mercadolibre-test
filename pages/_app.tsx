@@ -21,8 +21,8 @@ const App: NextComponentType<AppContext, AppInitialProps, Props> = ({
   </div>
 )
 
-App.getInitialProps = ({ Component, ctx }) => ({
-  pageProps: Component.getInitialProps?.(ctx) ?? {},
+App.getInitialProps = async ({ Component, ctx }) => ({
+  pageProps: (await Component.getInitialProps?.(ctx)) ?? Promise.resolve({}),
   search: getQueryKey(ctx.query, 'search'),
 })
 

@@ -1,30 +1,22 @@
 import React from 'react'
-import { MeLiSearch } from '~/types/api'
+import { ApiSearch } from '~/types/api'
 import SearchResultItem from './SearchResultItem'
 import './SearchResults.scss'
 
 type Props = {
-  results: MeLiSearch
-  pageSize?: number
-  page?: number
+  results: ApiSearch
 }
 
-const SearchResults = ({ results, page = 1, pageSize = 4 }: Props) => {
-  const fromIndex = (page - 1) * pageSize
-  const toIndex = fromIndex + pageSize
-  const items = results.results.slice(fromIndex, toIndex)
-
-  return (
-    <section>
-      <ol className="SearchResults__list">
-        {items.map(item => (
-          <li key={item.id}>
-            <SearchResultItem item={item} />
-          </li>
-        ))}
-      </ol>
-    </section>
-  )
-}
+const SearchResults = ({ results }: Props) => (
+  <section>
+    <ol className="SearchResults__list">
+      {results.items.map(item => (
+        <li key={item.id}>
+          <SearchResultItem item={item} />
+        </li>
+      ))}
+    </ol>
+  </section>
+)
 
 export default SearchResults

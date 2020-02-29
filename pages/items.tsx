@@ -1,15 +1,30 @@
 import React from 'react'
 import { NextPage } from 'next'
 import SearchResults from '~/components/SearchResults'
-import results from './results.json'
 import PageContent from '~/components/PageContent'
+import fetch from 'isomorphic-unfetch'
+import getQueryKey from '~/helpers/getQueryKey'
+import absoluteUrl from 'next-absolute-url'
+import { ApiSearch } from '~/types/api'
 
-type Props = {}
+type Props = {
+  results: ApiSearch
+}
 
-const Items: NextPage<Props> = () => (
+const Items: NextPage<Props> = ({ results }: Props) => (
   <PageContent>
     <SearchResults results={results} />
   </PageContent>
 )
+
+Items.getInitialProps = async ({ req, query }) => {
+  const { origin } = absoluteUrl(req)
+  const response = await fetch(
+    `${origin}/api/items?q=${getQueryKey(query, 'search')}`
+  )
+  const results = await response.json()
+
+  return { results }
+}
 
 export default Items
