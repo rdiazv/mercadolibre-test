@@ -16,4 +16,6 @@ module.exports = {
       tsConfig: 'tsconfig.jest.json',
     },
   },
+  clearMocks: true,
+  modulePaths: ['<rootDir>'],
 }

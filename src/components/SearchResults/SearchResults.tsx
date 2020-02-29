@@ -1,10 +1,10 @@
 import React from 'react'
-import { SearchResults as SearchResultsType } from '~/types/api'
+import { MeLiSearch } from '~/types/api'
 import SearchResultItem from './SearchResultItem'
 import './SearchResults.scss'
 
 type Props = {
-  results: SearchResultsType
+  results: MeLiSearch
   pageSize?: number
   page?: number
 }

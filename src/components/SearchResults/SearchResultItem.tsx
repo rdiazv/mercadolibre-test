@@ -1,10 +1,10 @@
 import React from 'react'
-import { SearchResultItem as SearchResultItemType } from '~/types/api'
+import { MeLiSearchResult } from '~/types/api'
 import Price from '~/components/Price'
 import './SearchResultItem.scss'
 
 type Props = {
-  item: SearchResultItemType
+  item: MeLiSearchResult
 }
 
 const SearchResultItem = ({ item }: Props) => {

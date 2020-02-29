@@ -18,6 +18,10 @@
     }
   },
   "rules": {
+    "@typescript-eslint/camelcase": ["error", {
+      "properties": "never",
+      "genericType": "never"
+    }],
     "@typescript-eslint/explicit-function-return-type": "off"
   },
   "overrides": [
