@@ -15,5 +15,6 @@
 
   @include breakpoint($sm) {
     border-radius: 4px;
+    box-shadow: 0 0 48px rgba(#000, 0.025);
   }
 }

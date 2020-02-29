@@ -3,7 +3,8 @@
 
 .AppHeader {
   background-color: #fff159;
-  border-bottom: #d6d6d6 1px;
+  border-bottom: darken(#fff159, 20%) 1px solid;
+  position: relative;
 
   @include breakpoint($sm) {
     padding: 0 $content-spacing;
