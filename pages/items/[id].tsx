@@ -12,7 +12,7 @@ type Props = {
 }
 
 const Item: NextPage<Props> = ({ item }: Props) => (
-  <PageContent>
+  <PageContent hierarchy={item.categories}>
     <ItemPage item={item} />
   </PageContent>
 )

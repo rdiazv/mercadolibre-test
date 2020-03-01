@@ -27,6 +27,7 @@ export type ApiItem = {
     name: string
     lastname: string
   }
+  categories: string[]
   item: {
     id: string
     title: string

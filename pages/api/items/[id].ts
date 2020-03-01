@@ -3,6 +3,7 @@ import getItem from 'api/helpers/getItem'
 import getItemDescription from 'api/helpers/getItemDescription'
 import getQueryKey from '~/helpers/getQueryKey'
 import parsePrice from 'api/helpers/parsePrice'
+import getCategory from 'api/helpers/getCategory'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
@@ -11,11 +12,13 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       getItem(id),
       getItemDescription(id),
     ])
+    const itemCategory = await getCategory(item.category_id)
     const response = {
       author: {
         name: 'Rodrigo',
         lastname: 'Díaz',
       },
+      categories: itemCategory.path_from_root.map(category => category.name),
       item: {
         id: item.id,
         title: item.title,
