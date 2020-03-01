@@ -1,0 +1,27 @@
+@import 'theme/mixins';
+@import 'theme/media';
+
+.Breadcrumb {
+  @include reset-list;
+  font-size: 13px;
+  margin: 16px;
+
+  > li {
+    color: #999;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
+  > li:nth-child(even) {
+    font-size: 1.5em;
+  }
+
+  > li:last-child {
+    margin-right: 0;
+  }
+
+  @include breakpoint($sm) {
+    margin: 0 0 16px;
+  }
+}

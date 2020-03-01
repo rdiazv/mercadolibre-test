@@ -18,4 +18,7 @@ module.exports = {
   },
   clearMocks: true,
   modulePaths: ['<rootDir>'],
+  moduleNameMapper: {
+    '^.+\\.(css|sass|scss)$': 'identity-obj-proxy',
+  },
 }
