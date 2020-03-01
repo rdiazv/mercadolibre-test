@@ -1,7 +1,7 @@
 import getSearchResults from './getSearchResults'
-import fetch from 'node-fetch'
+import fetch from 'isomorphic-unfetch'
 
-jest.mock('node-fetch', () => ({
+jest.mock('isomorphic-unfetch', () => ({
   __esModule: true,
   default: jest.fn().mockResolvedValue({
     json: jest.fn().mockResolvedValue([{ id: 1 }, { id: 2 }]),

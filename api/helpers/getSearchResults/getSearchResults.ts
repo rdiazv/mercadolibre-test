@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+import fetch from 'isomorphic-unfetch'
 import { MeLiSearch } from '~/types/api'
 
 export default function getSearchResults(query: string): Promise<MeLiSearch> {

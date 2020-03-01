@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+import fetch from 'isomorphic-unfetch'
 
 // Las monedas y categorías prácticamente no cambian así que
 // hay que mantenerlas en cache. En la vida real usaría algo
