@@ -22,6 +22,23 @@ export type ApiSearch = {
   items: ApiSearchResult[]
 }
 
+export type ApiItem = {
+  author: {
+    name: string
+    lastname: string
+  }
+  item: {
+    id: string
+    title: string
+    price: ApiPrice
+    picture: string
+    condition: 'new' | 'used'
+    free_shipping: boolean
+    sold_quantity: number
+    description: string
+  }
+}
+
 export type MeLiSearchResult = {
   id: string
   title: string
