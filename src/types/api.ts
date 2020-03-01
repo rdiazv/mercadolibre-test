@@ -25,7 +25,6 @@ export type ApiSearch = {
 export type MeLiSearchResult = {
   id: string
   title: string
-  original_price: number
   price: number
   thumbnail: string
   currency_id: string
@@ -52,4 +51,22 @@ export type MeLiCurrency = {
   symbol: string
   description: string
   decimal_places: number
+}
+
+export type MeLiItem = {
+  id: string
+  title: string
+  price: number
+  thumbnail: string
+  currency_id: string
+  category_id: string
+  condition: string
+  sold_quantity: number
+  shipping: {
+    free_shipping: boolean
+  }
+}
+
+export type MeLiItemDescription = {
+  plain_text: string
 }

@@ -6,6 +6,7 @@ import getSearchResults from 'api/helpers/getSearchResults'
 import getQueryKey from '~/helpers/getQueryKey'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
+  // TODO fix cache
   try {
     const data = await getSearchResults(getQueryKey(req.query, 'q'))
     const mainCategory = await getCategory(getMainCategoryId(data.results))
