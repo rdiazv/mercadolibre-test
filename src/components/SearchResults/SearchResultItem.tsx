@@ -14,7 +14,7 @@ const SearchResultItem = ({ item }: Props) => {
     <div className="SearchResultItem">
       <div className="SearchResultItem__imageContainer">
         <a href={url}>
-          <img src={item.picture} />
+          <img src={item.picture} alt={item.title} />
         </a>
       </div>
 

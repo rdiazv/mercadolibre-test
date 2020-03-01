@@ -11,7 +11,7 @@ const Item = ({ item: { item } }: Props) => (
   <section className="Item">
     <div className="Item__contents">
       <div className="Item__picture">
-        <img src={item.picture} />
+        <img src={item.picture} alt={item.title} />
       </div>
       <div className="Item__info">
         <div className="Item__condition">

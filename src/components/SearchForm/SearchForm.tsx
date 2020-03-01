@@ -24,7 +24,7 @@ const SearchForm: React.FC<Props> = ({ className, defaultValue }: Props) => (
 
     <button type="submit" className="SearchForm__submit">
       <div className="SearchForm__iconContainer">
-        <img src={searchIconUrl} width={18} height={18} />
+        <img src={searchIconUrl} width={18} height={18} alt="Buscar" />
       </div>
     </button>
   </form>
