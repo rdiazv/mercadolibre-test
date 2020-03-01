@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-unfetch'
-import { MeLiItemDescription } from '~/types/api'
+import { MeLiItemDescription } from 'src/types/api'
 
 export default function getItem(id: string): Promise<MeLiItemDescription> {
   return fetch(

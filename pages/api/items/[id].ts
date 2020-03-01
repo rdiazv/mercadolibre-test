@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import getItem from 'api/helpers/getItem'
 import getItemDescription from 'api/helpers/getItemDescription'
-import getQueryKey from '~/helpers/getQueryKey'
+import getQueryKey from 'src/helpers/getQueryKey'
 import parsePrice from 'api/helpers/parsePrice'
 import getCategory from 'api/helpers/getCategory'
 

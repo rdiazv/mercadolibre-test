@@ -1,6 +1,6 @@
 import React from 'react'
-import { ApiSearchResult } from '~/types/api'
-import Price from '~/components/Price'
+import { ApiSearchResult } from 'src/types/api'
+import Price from 'src/components/Price'
 import './SearchResultItem.scss'
 
 type Props = {

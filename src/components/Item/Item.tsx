@@ -1,6 +1,6 @@
 import React from 'react'
-import { ApiItem } from '~/types/api'
-import Price from '~/components/Price'
+import { ApiItem } from 'src/types/api'
+import Price from 'src/components/Price'
 import './Item.scss'
 
 type Props = {

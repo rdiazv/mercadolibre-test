@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import Breadcrumb from '~/components/Breadcrumb'
+import Breadcrumb from 'src/components/Breadcrumb'
 import './PageContent.scss'
 
 type Props = React.HTMLProps<HTMLDivElement> & {

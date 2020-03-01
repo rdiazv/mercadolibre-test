@@ -1,6 +1,6 @@
 import React, { HTMLProps } from 'react'
-import { ApiPrice } from '~/types/api'
-import formatNumber from '~/helpers/formatNumber'
+import { ApiPrice } from 'src/types/api'
+import formatNumber from 'src/helpers/formatNumber'
 import './Price.scss'
 
 type Props = HTMLProps<HTMLSpanElement> & {

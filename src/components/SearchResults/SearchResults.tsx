@@ -1,5 +1,5 @@
 import React from 'react'
-import { ApiSearch } from '~/types/api'
+import { ApiSearch } from 'src/types/api'
 import SearchResultItem from './SearchResultItem'
 import './SearchResults.scss'
 

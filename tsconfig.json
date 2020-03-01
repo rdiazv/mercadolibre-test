@@ -19,7 +19,7 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"],
+      "src/*": ["src/*"],
       "api/*": ["api/*"],
       "__tests__/*": ["__tests__/*"]
     }

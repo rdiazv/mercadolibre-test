@@ -1,13 +1,13 @@
 import React from 'react'
 import { NextPage } from 'next'
-import getQueryKey from '~/helpers/getQueryKey'
+import getQueryKey from 'src/helpers/getQueryKey'
 import fetch from 'isomorphic-unfetch'
 import absoluteUrl from 'next-absolute-url'
-import { ApiItem } from '~/types/api'
-import PageContent from '~/components/PageContent'
-import ItemPage from '~/components/Item'
+import { ApiItem } from 'src/types/api'
+import PageContent from 'src/components/PageContent'
+import ItemPage from 'src/components/Item'
 import Head from 'next/head'
-import getPriceText from '~/helpers/getPriceText'
+import getPriceText from 'src/helpers/getPriceText'
 
 type Props = {
   item: ApiItem

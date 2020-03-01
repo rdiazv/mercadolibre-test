@@ -7,7 +7,7 @@
         "paths": [
           {
             "rootPathSuffix": "./src",
-            "rootPathPrefix": "~/"
+            "rootPathPrefix": "src/"
           },
           {
             "rootPathSuffix": "./api",

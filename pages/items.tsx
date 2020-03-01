@@ -1,11 +1,11 @@
 import React from 'react'
 import { NextPage } from 'next'
-import SearchResults from '~/components/SearchResults'
-import PageContent from '~/components/PageContent'
+import SearchResults from 'src/components/SearchResults'
+import PageContent from 'src/components/PageContent'
 import fetch from 'isomorphic-unfetch'
-import getQueryKey from '~/helpers/getQueryKey'
+import getQueryKey from 'src/helpers/getQueryKey'
 import absoluteUrl from 'next-absolute-url'
-import { ApiSearch } from '~/types/api'
+import { ApiSearch } from 'src/types/api'
 import Head from 'next/head'
 
 type Props = {

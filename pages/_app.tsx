@@ -1,11 +1,11 @@
 import React from 'react'
 import { NextComponentType } from 'next'
 import { AppContext, AppProps, AppInitialProps } from 'next/app'
-import getQueryKey from '~/helpers/getQueryKey'
-import AppHeader from '~/components/AppHeader'
+import getQueryKey from 'src/helpers/getQueryKey'
+import AppHeader from 'src/components/AppHeader'
 import Head from 'next/head'
 import 'normalize.css'
-import '~/theme/base.scss'
+import 'src/theme/base.scss'
 
 type Props = AppProps & {
   search: string

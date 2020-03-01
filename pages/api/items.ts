@@ -3,7 +3,7 @@ import getMainCategoryId from 'api/helpers/getMainCategoryId'
 import getCategory from 'api/helpers/getCategory'
 import parsePrice from 'api/helpers/parsePrice'
 import getSearchResults from 'api/helpers/getSearchResults'
-import getQueryKey from '~/helpers/getQueryKey'
+import getQueryKey from 'src/helpers/getQueryKey'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {

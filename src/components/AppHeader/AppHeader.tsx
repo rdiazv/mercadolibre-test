@@ -1,5 +1,5 @@
 import React from 'react'
-import SearchForm from '~/components/SearchForm'
+import SearchForm from 'src/components/SearchForm'
 import logoUrl from './logo.png'
 import './AppHeader.scss'
 
