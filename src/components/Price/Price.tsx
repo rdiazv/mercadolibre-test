@@ -10,7 +10,7 @@ const Price = ({ price: { currency, amount, decimals }, ...props }: Props) => (
   <span {...props}>
     <span className="Price">
       {currency} {amount.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}
-      {decimals && <span className="Price__fraction">{decimals}</span>}
+      {decimals > 0 && <span className="Price__fraction">{decimals}</span>}
     </span>
   </span>
 )
