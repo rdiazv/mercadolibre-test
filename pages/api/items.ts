@@ -6,26 +6,30 @@ import getSearchResults from 'api/helpers/getSearchResults'
 import getQueryKey from '~/helpers/getQueryKey'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  // TODO fix cache
   try {
     const data = await getSearchResults(getQueryKey(req.query, 'q'))
     const mainCategory = await getCategory(getMainCategoryId(data.results))
+    const itemsData = data.results.slice(0, 4)
+    const items = []
+
+    for (let i = 0; i < itemsData.length; i++) {
+      items.push({
+        id: itemsData[i].id,
+        title: itemsData[i].title,
+        price: await parsePrice(itemsData[i].price, itemsData[i].currency_id),
+        picture: itemsData[i].thumbnail,
+        condition: itemsData[i].condition,
+        free_shipping: itemsData[i].shipping.free_shipping,
+      })
+    }
+
     const response = {
       author: {
         name: 'Rodrigo',
         lastname: 'Díaz',
       },
       categories: mainCategory.path_from_root.map(category => category.name),
-      items: await Promise.all(
-        data.results.slice(0, 4).map(async item => ({
-          id: item.id,
-          title: item.title,
-          price: await parsePrice(item.price, item.currency_id),
-          picture: item.thumbnail,
-          condition: item.condition,
-          free_shipping: item.shipping.free_shipping,
-        }))
-      ),
+      items,
     }
 
     res.status(200).json(response)
