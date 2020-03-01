@@ -1,24 +1,37 @@
+@import 'theme/media';
+
 .Item {
-  padding: 32px;
+  padding: 24px;
 
   h1 {
     font-size: 1.5em;
     font-weight: 500;
     margin: 8px 0 16px 0;
   }
+
+  @include breakpoint($sm) {
+    padding: 32px;
+  }
 }
 
 .Item__contents {
-  display: flex;
+  @include breakpoint($sm) {
+    display: flex;
+  }
 }
 
 .Item__picture {
-  flex: 1;
-  padding-right: 10%;
+  margin-bottom: 24px;
 
   img {
     display: block;
     width: 100%;
+  }
+
+  @include breakpoint($sm) {
+    margin-bottom: 0;
+    flex: 1;
+    padding-right: 10%;
   }
 }
 
