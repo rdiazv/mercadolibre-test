@@ -12,6 +12,18 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       getItem(id),
       getItemDescription(id),
     ])
+
+    if (!item) {
+      return res.status(404).json({
+        author: {
+          name: 'Rodrigo',
+          lastname: 'Díaz',
+        },
+        categories: [],
+        item: null,
+      })
+    }
+
     const itemCategory = await getCategory(item.category_id)
     const response = {
       author: {

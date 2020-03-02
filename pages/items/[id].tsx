@@ -8,12 +8,21 @@ import PageContent from 'src/components/PageContent'
 import ItemPage from 'src/components/Item'
 import Head from 'next/head'
 import getPriceText from 'src/helpers/getPriceText'
+import PageMessage from 'src/components/PageMessage'
 
 type Props = {
   item: ApiItem
 }
 
 const Item: NextPage<Props> = ({ item }: Props) => {
+  if (!item.item) {
+    return (
+      <PageMessage>
+        <p>No encontramos el producto que buscas.</p>
+      </PageMessage>
+    )
+  }
+
   const priceText = getPriceText(item.item.price)
 
   return (

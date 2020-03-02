@@ -8,7 +8,10 @@ import getQueryKey from 'src/helpers/getQueryKey'
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const data = await getSearchResults(getQueryKey(req.query, 'q'))
-    const mainCategory = await getCategory(getMainCategoryId(data.results))
+    const mainCategory =
+      data.results.length > 0
+        ? await getCategory(getMainCategoryId(data.results))
+        : null
     const itemsData = data.results.slice(0, 4)
     const items = []
 
@@ -28,7 +31,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         name: 'Rodrigo',
         lastname: 'Díaz',
       },
-      categories: mainCategory.path_from_root.map(category => category.name),
+      categories: mainCategory
+        ? mainCategory.path_from_root.map(category => category.name)
+        : [],
       items,
     }
 

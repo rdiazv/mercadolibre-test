@@ -7,29 +7,40 @@ import getQueryKey from 'src/helpers/getQueryKey'
 import absoluteUrl from 'next-absolute-url'
 import { ApiSearch } from 'src/types/api'
 import Head from 'next/head'
+import PageMessage from 'src/components/PageMessage'
 
 type Props = {
   results: ApiSearch
 }
 
-const Items: NextPage<Props> = ({ results }: Props) => (
-  <PageContent
-    hierarchy={results.categories}
-    itemScope
-    itemType="http://schema.org/SearchResultsPage"
-  >
-    <Head>
-      <title>{results.categories[0]} en Mercado Libre</title>
-      <meta
-        name="description"
-        content={`Encuentra ${results.categories[0]} en Mercado Libre Chile. Descubre la mejor forma de comprar online.`}
-        key="description"
-      />
-    </Head>
+const Items: NextPage<Props> = ({ results }: Props) => {
+  if (results.items.length === 0) {
+    return (
+      <PageMessage>
+        <p>No hay publicaciones que coincidan con tu búsqueda.</p>
+      </PageMessage>
+    )
+  }
 
-    <SearchResults results={results} />
-  </PageContent>
-)
+  return (
+    <PageContent
+      hierarchy={results.categories}
+      itemScope
+      itemType="http://schema.org/SearchResultsPage"
+    >
+      <Head>
+        <title>{results.categories[0]} en Mercado Libre</title>
+        <meta
+          name="description"
+          content={`Encuentra ${results.categories[0]} en Mercado Libre Chile. Descubre la mejor forma de comprar online.`}
+          key="description"
+        />
+      </Head>
+
+      <SearchResults results={results} />
+    </PageContent>
+  )
+}
 
 Items.getInitialProps = async ({ req, query }) => {
   const { origin } = absoluteUrl(req)
