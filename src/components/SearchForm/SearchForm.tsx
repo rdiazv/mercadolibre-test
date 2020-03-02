@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import classnames from 'classnames'
 import searchIconUrl from './search.png'
 import './SearchForm.scss'
-import OriginContext from '../OriginContext'
+import OriginContext from 'src/components/OriginContext'
 
 type Props = {
   defaultValue?: string

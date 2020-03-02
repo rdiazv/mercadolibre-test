@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { ApiSearch } from 'src/types/api'
 import SearchResultItem from './SearchResultItem'
 import './SearchResults.scss'
-import OriginContext from '../OriginContext'
+import OriginContext from 'src/components/OriginContext'
 
 type Props = {
   results: ApiSearch

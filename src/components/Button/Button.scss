@@ -1,0 +1,17 @@
+@import 'theme/variables';
+@import 'theme/mixins';
+
+.Button {
+  @include reset-button;
+  background-color: $link-color;
+  color: #fff;
+  border-radius: 4px;
+  padding: 16px 24px;
+  font-size: 1.2em;
+  width: 100%;
+  transition: background-color $transition-duration ease-out;
+
+  &:hover {
+    background-color: $link-hover-color;
+  }
+}

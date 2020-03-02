@@ -2,7 +2,8 @@ import React, { useContext } from 'react'
 import { ApiItem } from 'src/types/api'
 import Price from 'src/components/Price'
 import './Item.scss'
-import OriginContext from '../OriginContext'
+import OriginContext from 'src/components/OriginContext'
+import Button from 'src/components/Button'
 
 type Props = {
   item: ApiItem
@@ -38,7 +39,8 @@ const Item = ({ item: { item } }: Props) => {
           </div>
           <h1 itemProp="name">{item.title}</h1>
           <Price price={item.price} className="Item__price" itemProp="offers" />
-          <button>Comprar</button>
+
+          <Button>Comprar</Button>
         </section>
       </div>
 
