@@ -21,7 +21,11 @@ const Item = ({ item: { item } }: Props) => (
 
     <div className="Item__contents">
       <figure className="Item__picture">
-        <img src={item.picture} alt={item.title} itemProp="image" />
+        <img
+          src={item.picture.replace(/https?:/, '')}
+          alt={item.title}
+          itemProp="image"
+        />
       </figure>
       <section className="Item__info">
         <div className="Item__condition">

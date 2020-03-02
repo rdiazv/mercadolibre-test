@@ -27,7 +27,11 @@ const SearchResultItem = ({ item }: Props) => {
 
       <figure className="SearchResultItem__imageContainer">
         <a href={url} itemProp="url">
-          <img src={item.picture} alt={item.title} itemProp="image" />
+          <img
+            src={item.picture.replace(/https?:/, '')}
+            alt={item.title}
+            itemProp="image"
+          />
         </a>
       </figure>
 
