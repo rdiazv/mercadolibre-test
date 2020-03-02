@@ -35,6 +35,7 @@ const App: NextComponentType<AppContext, AppInitialProps, Props> = ({
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
         key="viewport"
       />
+      <link rel="shortcut icon" href="/favicon.ico" />
     </Head>
 
     <OriginContext.Provider value={origin}>
