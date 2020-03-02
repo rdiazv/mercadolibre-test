@@ -17,7 +17,11 @@ const Items: NextPage<Props> = ({ results }: Props) => {
   if (results.items.length === 0) {
     return (
       <PageMessage>
-        <p>No hay publicaciones que coincidan con tu búsqueda.</p>
+        <h4>No hay publicaciones que coincidan con tu búsqueda.</h4>
+        <ul>
+          <li>Revisa la ortografía de la palabra.</li>
+          <li>Utiliza palabras más genéricas o menos palabras.</li>
+        </ul>
       </PageMessage>
     )
   }

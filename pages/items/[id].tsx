@@ -18,7 +18,8 @@ const Item: NextPage<Props> = ({ item }: Props) => {
   if (!item.item) {
     return (
       <PageMessage>
-        <p>No encontramos el producto que buscas.</p>
+        <h4>No encontramos la página que buscas.</h4>
+        <a href="/">Ir a la página principal</a>
       </PageMessage>
     )
   }

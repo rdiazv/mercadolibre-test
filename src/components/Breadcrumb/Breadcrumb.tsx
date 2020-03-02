@@ -22,9 +22,14 @@ const Breadcrumb = ({ hierarchy }: Props) => {
               itemType="https://schema.org/ListItem"
             >
               <meta itemProp="position" content={`${index + 1}`} />
-              <div itemProp="item" itemScope itemType="http://schema.org/Thing">
+              <a
+                href="/"
+                itemProp="item"
+                itemScope
+                itemType="http://schema.org/Thing"
+              >
                 <span itemProp="name">{segment}</span>
-              </div>
+              </a>
             </li>
           ))
           .reduce((current, segment, index) => (

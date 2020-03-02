@@ -1,27 +1,33 @@
 @import 'theme/mixins';
 @import 'theme/media';
+@import 'theme/variables';
 
 .Breadcrumb {
   font-size: 13px;
   margin: 16px;
 
-  > ol {
+  ol {
     @include reset-list;
+  }
 
-    > li {
-      color: #666;
-      display: inline-block;
-      margin-right: 8px;
-      vertical-align: middle;
-    }
+  li {
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
 
-    > li:nth-child(even) {
-      font-size: 1.5em;
-    }
+  li:nth-child(even) {
+    font-size: 1.5em;
+  }
 
-    > li:last-child {
-      margin-right: 0;
-    }
+  li:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    @include reset-anchor;
+    @include active-hover;
+    color: #666;
   }
 
   @include breakpoint($sm) {

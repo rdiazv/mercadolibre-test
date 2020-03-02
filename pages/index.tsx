@@ -4,7 +4,13 @@ import PageMessage from 'src/components/PageMessage'
 
 const Home: NextPage = () => (
   <PageMessage>
-    <p>Escribe en el buscador lo que quieres encontrar.</p>
+    <h4>Escribe en el buscador lo que quieres encontrar.</h4>
+    <ul>
+      <li>
+        Escribe tu búsqueda en el campo que figura en la parte superior de la
+        pantalla.
+      </li>
+    </ul>
   </PageMessage>
 )
 

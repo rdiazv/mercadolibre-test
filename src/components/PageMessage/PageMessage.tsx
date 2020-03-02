@@ -3,7 +3,7 @@ import PageContent from 'src/components/PageContent'
 import './PageMessage.scss'
 
 type Props = {
-  children: ReactElement
+  children: ReactElement | ReactElement[]
 }
 
 const PageMessage = ({ children }: Props) => (
