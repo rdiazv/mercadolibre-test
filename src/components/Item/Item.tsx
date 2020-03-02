@@ -10,10 +10,10 @@ type Props = {
 const Item = ({ item: { item } }: Props) => (
   <section className="Item">
     <div className="Item__contents">
-      <div className="Item__picture">
+      <figure className="Item__picture">
         <img src={item.picture} alt={item.title} />
-      </div>
-      <div className="Item__info">
+      </figure>
+      <section className="Item__info">
         <div className="Item__condition">
           {item.condition ? 'Nuevo' : 'Usado'} · {item.sold_quantity}{' '}
           {item.sold_quantity === 1 ? 'vendido' : 'vendidos'}
@@ -21,14 +21,14 @@ const Item = ({ item: { item } }: Props) => (
         <h1>{item.title}</h1>
         <Price price={item.price} className="Item__price" />
         <button>Comprar</button>
-      </div>
+      </section>
     </div>
 
     {item.description && (
-      <div className="Item__description">
+      <section className="Item__description">
         <h2>Descripción del producto</h2>
         <p>{item.description}</p>
-      </div>
+      </section>
     )}
   </section>
 )

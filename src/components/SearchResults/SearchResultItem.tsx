@@ -12,16 +12,16 @@ const SearchResultItem = ({ item }: Props) => {
 
   return (
     <div className="SearchResultItem">
-      <div className="SearchResultItem__imageContainer">
+      <figure className="SearchResultItem__imageContainer">
         <a href={url}>
           <img src={item.picture} alt={item.title} />
         </a>
-      </div>
+      </figure>
 
       <div>
-        <a href={url} className="SearchResultItem__title">
-          {item.title}
-        </a>
+        <h2 className="SearchResultItem__title">
+          <a href={url}>{item.title}</a>
+        </h2>
 
         <Price price={item.price} className="SearchResultItem__price" />
       </div>

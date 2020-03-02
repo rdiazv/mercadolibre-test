@@ -6,15 +6,17 @@ type Props = {
 }
 
 const Breadcrumb = ({ hierarchy }: Props) => (
-  <ul className="Breadcrumb">
-    {hierarchy
-      .map((segment, index) => <li key={index}>{segment}</li>)
-      .reduce((current, segment, index) => (
-        <Fragment key={index}>
-          {[current, <li key={`separator-${index}`}> · </li>, segment]}
-        </Fragment>
-      ))}
-  </ul>
+  <nav className="Breadcrumb">
+    <ul>
+      {hierarchy
+        .map((segment, index) => <li key={index}>{segment}</li>)
+        .reduce((current, segment, index) => (
+          <Fragment key={index}>
+            {[current, <li key={`separator-${index}`}> · </li>, segment]}
+          </Fragment>
+        ))}
+    </ul>
+  </nav>
 )
 
 export default Breadcrumb

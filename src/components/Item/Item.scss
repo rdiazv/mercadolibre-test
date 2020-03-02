@@ -21,6 +21,8 @@
 }
 
 .Item__picture {
+  margin: 0;
+  padding: 0;
   margin-bottom: 24px;
 
   img {
@@ -41,7 +43,7 @@
 
 .Item__condition {
   font-size: 0.75em;
-  color: #999;
+  color: #666;
 }
 
 .Item__price {

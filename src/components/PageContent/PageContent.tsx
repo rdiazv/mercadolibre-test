@@ -8,7 +8,7 @@ type Props = React.HTMLProps<HTMLDivElement> & {
 }
 
 const PageContent = ({ className, children, hierarchy, ...props }: Props) => (
-  <main {...props} className={classNames('PageContent', className)}>
+  <main role="main" {...props} className={classNames('PageContent', className)}>
     {hierarchy && <Breadcrumb hierarchy={hierarchy} />}
 
     <div className="PageContent__body">{children}</div>

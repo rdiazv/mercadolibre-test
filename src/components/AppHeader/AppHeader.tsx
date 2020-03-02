@@ -8,7 +8,7 @@ type Props = {
 }
 
 const AppHeader: React.FC<Props> = ({ search }: Props) => (
-  <header className="AppHeader">
+  <header className="AppHeader" role="banner">
     <div className="AppHeader__body">
       <a href="/" className="AppHeader__logo">
         <img src={logoUrl} alt="Mercado Libre" width={39} height={28} />
