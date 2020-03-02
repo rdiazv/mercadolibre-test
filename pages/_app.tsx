@@ -3,17 +3,21 @@ import { NextComponentType } from 'next'
 import { AppContext, AppProps, AppInitialProps } from 'next/app'
 import getQueryKey from 'src/helpers/getQueryKey'
 import AppHeader from 'src/components/AppHeader'
+import absoluteUrl from 'next-absolute-url'
 import Head from 'next/head'
+import OriginContext from 'src/components/OriginContext'
 import 'normalize.css'
 import 'src/theme/base.scss'
 
 type Props = AppProps & {
+  origin: string
   search: string
 }
 
 const App: NextComponentType<AppContext, AppInitialProps, Props> = ({
   Component,
   pageProps,
+  origin,
   search,
 }: Props) => (
   <div>
@@ -33,12 +37,15 @@ const App: NextComponentType<AppContext, AppInitialProps, Props> = ({
       />
     </Head>
 
-    <AppHeader search={search} />
-    <Component {...pageProps} />
+    <OriginContext.Provider value={origin}>
+      <AppHeader search={search} />
+      <Component {...pageProps} />
+    </OriginContext.Provider>
   </div>
 )
 
 App.getInitialProps = async ({ Component, ctx }) => ({
+  origin: absoluteUrl(ctx.req).origin,
   pageProps: (await Component.getInitialProps?.(ctx)) ?? Promise.resolve({}),
   search: getQueryKey(ctx.query, 'search'),
 })

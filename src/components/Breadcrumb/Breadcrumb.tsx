@@ -7,11 +7,7 @@ type Props = {
 
 const Breadcrumb = ({ hierarchy }: Props) => (
   <nav className="Breadcrumb">
-    <ol
-      itemProp="breadcrumb"
-      itemScope
-      itemType="https://schema.org/BreadcrumbList"
-    >
+    <ol itemScope itemType="https://schema.org/BreadcrumbList">
       {hierarchy
         .map((segment, index) => (
           <li

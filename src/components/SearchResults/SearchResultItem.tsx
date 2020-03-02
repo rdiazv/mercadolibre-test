@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { ApiSearchResult } from 'src/types/api'
 import Price from 'src/components/Price'
 import './SearchResultItem.scss'
+import OriginContext from '../OriginContext'
 
 type Props = {
   item: ApiSearchResult
 }
 
 const SearchResultItem = ({ item }: Props) => {
-  const url = `/items/${item.id}`
+  const origin = useContext(OriginContext)
+  const url = `${origin}/items/${item.id}`
 
   return (
     <div
