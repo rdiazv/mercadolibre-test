@@ -32,3 +32,21 @@
 .AppHeader__SearchForm {
   flex: 1;
 }
+
+.AppHeader__logo__xs {
+  display: block;
+}
+
+.AppHeader__logo__sm {
+  display: none;
+}
+
+@include breakpoint($sm) {
+  .AppHeader__logo__xs {
+    display: none;
+  }
+
+  .AppHeader__logo__sm {
+    display: block;
+  }
+}

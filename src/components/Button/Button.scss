@@ -3,7 +3,7 @@
 
 .Button {
   @include reset-button;
-  background-color: $link-color;
+  background-color: #0975e1;
   color: #fff;
   border-radius: 4px;
   padding: 16px 24px;
@@ -12,6 +12,6 @@
   transition: background-color $transition-duration ease-out;
 
   &:hover {
-    background-color: $link-hover-color;
+    background-color: darken(#0975e1, 10%);
   }
 }
