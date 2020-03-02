@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import Link from 'next/link'
 import './Breadcrumb.scss'
 
 type Props = {
@@ -22,14 +23,11 @@ const Breadcrumb = ({ hierarchy }: Props) => {
               itemType="https://schema.org/ListItem"
             >
               <meta itemProp="position" content={`${index + 1}`} />
-              <a
-                href="/"
-                itemProp="item"
-                itemScope
-                itemType="http://schema.org/Thing"
-              >
-                <span itemProp="name">{segment}</span>
-              </a>
+              <Link href="/" passHref>
+                <a itemProp="item" itemScope itemType="http://schema.org/Thing">
+                  <span itemProp="name">{segment}</span>
+                </a>
+              </Link>
             </li>
           ))
           .reduce((current, segment, index) => (

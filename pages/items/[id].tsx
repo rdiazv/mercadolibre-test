@@ -9,6 +9,7 @@ import ItemPage from 'src/components/Item'
 import Head from 'next/head'
 import getPriceText from 'src/helpers/getPriceText'
 import PageMessage from 'src/components/PageMessage'
+import Link from 'next/link'
 
 type Props = {
   item: ApiItem
@@ -19,7 +20,10 @@ const Item: NextPage<Props> = ({ item }: Props) => {
     return (
       <PageMessage>
         <h4>No encontramos la página que buscas.</h4>
-        <a href="/">Ir a la página principal</a>
+
+        <Link href="/" passHref>
+          <a>Ir a la página principal</a>
+        </Link>
       </PageMessage>
     )
   }

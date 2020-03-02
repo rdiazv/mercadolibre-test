@@ -3,6 +3,7 @@ import { ApiSearchResult } from 'src/types/api'
 import Price from 'src/components/Price'
 import './SearchResultItem.scss'
 import OriginContext from 'src/components/OriginContext'
+import Link from 'next/link'
 
 type Props = {
   item: ApiSearchResult
@@ -28,20 +29,22 @@ const SearchResultItem = ({ item }: Props) => {
       />
 
       <figure className="SearchResultItem__imageContainer">
-        <a href={url} itemProp="url">
-          <img
-            src={item.picture.replace(/https?:/, '')}
-            alt={item.title}
-            itemProp="image"
-          />
-        </a>
+        <Link href="items/[id]" as={url} passHref>
+          <a itemProp="url">
+            <img
+              src={item.picture.replace(/https?:/, '')}
+              alt={item.title}
+              itemProp="image"
+            />
+          </a>
+        </Link>
       </figure>
 
       <div>
         <h2 className="SearchResultItem__title" itemProp="name">
-          <a href={url} itemProp="url">
-            {item.title}
-          </a>
+          <Link href="items/[id]" as={url} passHref>
+            <a itemProp="url">{item.title}</a>
+          </Link>
         </h2>
 
         <Price
