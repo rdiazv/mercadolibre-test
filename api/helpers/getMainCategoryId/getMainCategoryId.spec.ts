@@ -1,4 +1,4 @@
-import getMainCategoryId from './getMainCategoryId'
+import getMainCategoryId from '.'
 
 describe('getMainCategoryId(data)', () => {
   it('returns the most common category of the given results', () => {

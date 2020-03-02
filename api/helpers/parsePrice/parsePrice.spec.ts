@@ -1,5 +1,5 @@
-import parsePrice from './parsePrice'
 import getCurrency from 'api/helpers/getCurrency'
+import parsePrice from '.'
 
 jest.mock('api/helpers/getCurrency', () => ({
   __esModule: true,

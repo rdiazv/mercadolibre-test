@@ -1,5 +1,5 @@
-import getCurrency from './getCurrency'
 import getApiResource from 'api/helpers/getApiResource'
+import getCurrency from '.'
 
 jest.mock('api/helpers/getApiResource', () => ({
   __esModule: true,

@@ -1,5 +1,5 @@
-import getApiResource, { clearCache } from './getApiResource'
 import fetch from 'isomorphic-unfetch'
+import getApiResource, { clearCache } from '.'
 
 jest.mock('isomorphic-unfetch', () => ({
   __esModule: true,

@@ -1,5 +1,5 @@
-import getSearchResults from './getSearchResults'
 import fetch from 'isomorphic-unfetch'
+import getSearchResults from '.'
 
 jest.mock('isomorphic-unfetch', () => ({
   __esModule: true,

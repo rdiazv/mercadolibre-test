@@ -1,5 +1,5 @@
 import React from 'react'
-import Breadcrumb from './Breadcrumb'
+import Breadcrumb from '.'
 import { mount } from 'enzyme'
 
 describe('Breadcrumb', () => {
@@ -7,5 +7,11 @@ describe('Breadcrumb', () => {
     const container = mount(<Breadcrumb hierarchy={['A', 'B', 'C']} />)
 
     expect(container).toHaveText('A · B · C')
+  })
+
+  it('renders nothing if the hierarchy is empty', () => {
+    const container = mount(<Breadcrumb hierarchy={[]} />)
+
+    expect(container).toBeEmptyRender()
   })
 })

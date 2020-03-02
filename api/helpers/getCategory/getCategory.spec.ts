@@ -1,5 +1,5 @@
-import getCategory from './getCategory'
 import getApiResource from 'api/helpers/getApiResource'
+import getCategory from '.'
 
 jest.mock('api/helpers/getApiResource', () => ({
   __esModule: true,

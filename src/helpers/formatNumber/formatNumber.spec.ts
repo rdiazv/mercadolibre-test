@@ -1,4 +1,4 @@
-import formatNumber from './formatNumber'
+import formatNumber from '.'
 
 describe('formatNumber(number)', () => {
   it('add thousand separators to the number', () => {

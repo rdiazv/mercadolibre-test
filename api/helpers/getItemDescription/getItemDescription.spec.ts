@@ -1,5 +1,5 @@
-import getItemDescription from './getItemDescription'
 import fetch from 'isomorphic-unfetch'
+import getItemDescription from '.'
 
 jest.mock('isomorphic-unfetch', () => ({
   __esModule: true,
