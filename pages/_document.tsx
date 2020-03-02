@@ -11,7 +11,7 @@ class AppDocument extends Document {
     return (
       <Html lang="es">
         <Head />
-        <body>
+        <body itemScope itemType="http://schema.org/WebSite">
           <Main />
           <NextScript />
         </body>

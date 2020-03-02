@@ -14,7 +14,12 @@ const SearchForm: React.FC<Props> = ({ className, defaultValue }: Props) => (
     action="/items"
     className={classnames('SearchForm', className)}
     role="search"
+    itemProp="potentialAction"
+    itemScope
+    itemType="http://schema.org/SearchAction"
   >
+    <meta itemProp="target" content="/items?search={search}" />
+
     <label>
       <span className="hide-visually">Buscar</span>
 
@@ -26,6 +31,7 @@ const SearchForm: React.FC<Props> = ({ className, defaultValue }: Props) => (
         defaultValue={defaultValue}
         autoComplete="off"
         aria-label="Ingresa lo que quieras encontrar"
+        itemProp="query-input"
       />
     </label>
 

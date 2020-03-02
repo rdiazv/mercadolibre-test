@@ -13,7 +13,11 @@ type Props = {
 }
 
 const Items: NextPage<Props> = ({ results }: Props) => (
-  <PageContent hierarchy={results.categories}>
+  <PageContent
+    hierarchy={results.categories}
+    itemScope
+    itemType="http://schema.org/SearchResultsPage"
+  >
     <Head>
       <title>{results.categories[0]} en Mercado Libre</title>
       <meta

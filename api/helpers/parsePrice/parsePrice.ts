@@ -10,6 +10,7 @@ export default async function parsePrice(price: number, currencyid: string) {
 
   return {
     currency: currency.symbol,
+    currencyCode: currency.id,
     amount: Math.floor(price),
     decimals: decimals ? parseInt(decimals, 10) : 0,
   }

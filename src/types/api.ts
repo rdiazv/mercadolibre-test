@@ -1,5 +1,6 @@
 export type ApiPrice = {
   currency: string
+  currencyCode: string
   amount: number
   decimals: number
 }

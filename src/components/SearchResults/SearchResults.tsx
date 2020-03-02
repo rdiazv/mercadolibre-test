@@ -9,10 +9,21 @@ type Props = {
 
 const SearchResults = ({ results }: Props) => (
   <section>
-    <ol className="SearchResults__list">
-      {results.items.map(item => (
-        <li key={item.id}>
+    <ol
+      className="SearchResults__list"
+      itemScope
+      itemType="http://schema.org/ItemList"
+    >
+      {results.items.map((item, index) => (
+        <li
+          key={item.id}
+          itemProp="itemListElement"
+          itemScope
+          itemType="http://schema.org/ListItem"
+        >
           <SearchResultItem item={item} />
+          <meta itemProp="URL" content={`/items/${item.id}`} />
+          <meta itemProp="position" content={`${index + 1}`} />
         </li>
       ))}
     </ol>
