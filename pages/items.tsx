@@ -11,16 +11,31 @@ import PageMessage from 'src/components/PageMessage'
 
 type Props = {
   results: ApiSearch
+  search: string
 }
 
-const Items: NextPage<Props> = ({ results }: Props) => {
-  if (results.items.length === 0) {
+const Items: NextPage<Props> = ({ results, search }: Props) => {
+  if (results.items.length === 0 && search) {
     return (
       <PageMessage>
         <h4>No hay publicaciones que coincidan con tu búsqueda.</h4>
         <ul>
           <li>Revisa la ortografía de la palabra.</li>
           <li>Utiliza palabras más genéricas o menos palabras.</li>
+        </ul>
+      </PageMessage>
+    )
+  }
+
+  if (results.items.length === 0 && !search) {
+    return (
+      <PageMessage>
+        <h4>Escribe en el buscador lo que quieres encontrar.</h4>
+        <ul>
+          <li>
+            Escribe tu búsqueda en el campo que figura en la parte superior de
+            la pantalla.
+          </li>
         </ul>
       </PageMessage>
     )
@@ -48,12 +63,11 @@ const Items: NextPage<Props> = ({ results }: Props) => {
 
 Items.getInitialProps = async ({ req, query }) => {
   const { origin } = absoluteUrl(req)
-  const response = await fetch(
-    `${origin}/api/items?q=${getQueryKey(query, 'search')}`
-  )
+  const search = getQueryKey(query, 'search')
+  const response = await fetch(`${origin}/api/items?q=${search}`)
   const results = await response.json()
 
-  return { results }
+  return { results, search }
 }
 
 export default Items
