@@ -23,6 +23,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         picture: itemsData[i].thumbnail,
         condition: itemsData[i].condition,
         free_shipping: itemsData[i].shipping.free_shipping,
+        state_name: itemsData[i].address.state_name,
       })
     }
 

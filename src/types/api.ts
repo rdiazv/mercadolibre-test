@@ -10,6 +10,7 @@ export type ApiSearchResult = {
   title: string
   price: ApiPrice
   picture: string
+  state_name: string
   condition: 'new' | 'used'
   free_shipping: boolean
 }
@@ -51,6 +52,9 @@ export type MeLiSearchResult = {
   condition: string
   shipping: {
     free_shipping: boolean
+  }
+  address: {
+    state_name: string
   }
 }
 

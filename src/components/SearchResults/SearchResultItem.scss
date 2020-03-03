@@ -12,6 +12,10 @@
   }
 }
 
+.SearchResultItem__info {
+  flex: 1;
+}
+
 .SearchResultItem__imageContainer {
   margin: 0;
   padding: 0;
@@ -38,8 +42,43 @@
   }
 }
 
-.SearchResultItem__price {
-  display: block;
+.SearchResultItem__addressSM,
+.SearchResultItem__addressXS {
+  color: #666;
+  font-weight: 300;
+}
+
+.SearchResultItem__addressXS {
   margin-top: 0.5em;
+  font-size: 0.9em;
+}
+
+.SearchResultItem__addressSM {
+  display: none;
+  font-size: 0.8em;
+  margin-left: 40px;
+}
+
+@include breakpoint($sm) {
+  .SearchResultItem__addressXS {
+    display: none;
+  }
+
+  .SearchResultItem__addressSM {
+    display: block;
+  }
+}
+
+.SearchResultItem__priceRow {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5em;
+}
+
+.SearchResultItem__price {
   font-size: 1.4em;
+}
+
+.SearchResultItem__freeShipping {
+  margin-left: 0.75em;
 }

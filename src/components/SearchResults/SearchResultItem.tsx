@@ -4,6 +4,7 @@ import Price from 'src/components/Price'
 import './SearchResultItem.scss'
 import OriginContext from 'src/components/OriginContext'
 import Link from 'next/link'
+import freeShippingUrl from './free_shipping.png'
 
 type Props = {
   item: ApiSearchResult
@@ -40,19 +41,40 @@ const SearchResultItem = ({ item }: Props) => {
         </Link>
       </figure>
 
-      <div>
+      <div className="SearchResultItem__info">
         <h2 className="SearchResultItem__title" itemProp="name">
           <Link href="items/[id]" as={url} passHref>
             <a itemProp="url">{item.title}</a>
           </Link>
         </h2>
 
-        <Price
-          price={item.price}
-          className="SearchResultItem__price"
-          itemProp="offers"
-        />
+        <div className="SearchResultItem__priceRow">
+          <Price
+            price={item.price}
+            className="SearchResultItem__price"
+            itemProp="offers"
+          />
+
+          {item.free_shipping && (
+            <img
+              src={freeShippingUrl}
+              width={18}
+              height={18}
+              className="SearchResultItem__freeShipping"
+              alt="Envío gratuito"
+              title="Envío gratuito"
+            />
+          )}
+        </div>
+
+        {item.state_name && (
+          <div className="SearchResultItem__addressXS">{item.state_name}</div>
+        )}
       </div>
+
+      {item.state_name && (
+        <div className="SearchResultItem__addressSM">{item.state_name}</div>
+      )}
     </div>
   )
 }
