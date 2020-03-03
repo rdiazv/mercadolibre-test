@@ -6,6 +6,7 @@ Most recent production build available in [https://mercadolibre-rdiaz.herokuapp.
 ## Built with
 - [Next.js](https://nextjs.org/)
 - [React](https://reactjs.org/)
+- [SASS](https://sass-lang.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 
 ## Getting Started
