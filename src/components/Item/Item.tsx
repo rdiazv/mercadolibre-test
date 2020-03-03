@@ -13,7 +13,7 @@ const Item = ({ item: { item } }: Props) => {
   const origin = useContext(OriginContext)
 
   return (
-    <section className="Item" itemScope itemType="http://schema.org/Product">
+    <article className="Item" itemScope itemType="http://schema.org/Product">
       <meta itemProp="url" content={`${origin}/items/${item.id}`} />
       <meta
         itemProp="itemCondition"
@@ -50,7 +50,7 @@ const Item = ({ item: { item } }: Props) => {
           <p itemProp="description">{item.description}</p>
         </section>
       )}
-    </section>
+    </article>
   )
 }
 
