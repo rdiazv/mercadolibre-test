@@ -48,6 +48,10 @@ const SearchResultItem = ({ item }: Props) => {
           </Link>
         </h2>
 
+        {item.state_name && (
+          <div className="SearchResultItem__addressXS">{item.state_name}</div>
+        )}
+
         <div className="SearchResultItem__priceRow">
           <Price
             price={item.price}
@@ -63,13 +67,11 @@ const SearchResultItem = ({ item }: Props) => {
               className="SearchResultItem__freeShipping"
               alt="Envío gratuito"
               title="Envío gratuito"
+              data-tip="Envío gratuito"
+              data-place="right"
             />
           )}
         </div>
-
-        {item.state_name && (
-          <div className="SearchResultItem__addressXS">{item.state_name}</div>
-        )}
       </div>
 
       {item.state_name && (

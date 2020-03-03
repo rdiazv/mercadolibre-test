@@ -6,6 +6,7 @@ import AppHeader from 'src/components/AppHeader'
 import absoluteUrl from 'next-absolute-url'
 import Head from 'next/head'
 import OriginContext from 'src/components/OriginContext'
+import ReactTooltip from 'react-tooltip'
 import 'normalize.css'
 import 'src/theme/base.scss'
 
@@ -37,6 +38,8 @@ const App: NextComponentType<AppContext, AppInitialProps, Props> = ({
       />
       <link rel="shortcut icon" href="/favicon.ico" />
     </Head>
+
+    <ReactTooltip effect="solid" />
 
     <OriginContext.Provider value={origin}>
       <AppHeader search={search} />
