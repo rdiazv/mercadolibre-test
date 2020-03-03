@@ -1,30 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
+Most recent production build available in [https://mercadolibre-rdiaz.herokuapp.com](https://mercadolibre-rdiaz.herokuapp.com)
+
+## Requirements
+- [NodeJS](https://nodejs.org/) >= 10.13.0
+
+## Built with
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies and start the development server:
 
 ```bash
-npm run dev
-# or
+yarn install
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Production build
 
-## Learn More
+```bash
+yarn build
+PORT=3000 yarn start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Tests
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+yarn test
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
+Run in watch mode and collect coverage with:
 
-## Deploy on ZEIT Now
+```bash
+yarn test --watch --coverage
+```
 
-The easiest way to deploy your Next.js app is to use the [ZEIT Now Platform](https://zeit.co/) from the creators of Next.js.
+Open the html coverage report with:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+open coverage/index.html
+```
+
+## Lint
+
+Check for typescript or code style errors with:
+
+```bash
+yarn lint
+```
