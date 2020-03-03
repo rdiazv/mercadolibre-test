@@ -27,6 +27,10 @@
 .AppHeader__logo {
   flex-shrink: 0;
   margin-right: 16px;
+
+  @include breakpoint($sm) {
+    margin-right: 32px;
+  }
 }
 
 .AppHeader__SearchForm {

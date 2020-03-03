@@ -19,14 +19,19 @@
 .SearchResultItem__imageContainer {
   margin: 0;
   padding: 0;
-  margin-right: 32px;
-  width: 90px;
-  height: 90px;
+  margin-right: 1.75em;
+  width: 72px;
+  height: 72px;
   flex-shrink: 0;
 
   img {
     display: block;
     width: 100%;
+  }
+
+  @include breakpoint($sm) {
+    width: 90px;
+    height: 90px;
   }
 }
 
